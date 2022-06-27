@@ -10,7 +10,7 @@ public class UploadDownloadTest extends BasePage {
     public void download() throws InterruptedException {
 
         uploadDownloadPage.goToUploadDownload();
-        Thread.sleep(2000);
+        Thread.sleep(2000 );
         uploadDownloadPage.getDownload().click();
     }
 
