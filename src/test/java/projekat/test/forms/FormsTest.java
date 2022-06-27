@@ -18,7 +18,7 @@ public class FormsTest extends BasePage {
 
     @BeforeMethod
     public void beforeMethod(){
-        formsPage.goToForms();
+        formsPage.goToForms(   );
         formsPage.clickPracticeForm();
     }
 
