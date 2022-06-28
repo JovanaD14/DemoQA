@@ -35,7 +35,8 @@ public class BasePage {
     public Buttons buttonsPage;
     public Links linksPage;
     public DynamicProperties dynamicPropertiesPage;
-    public Forms formsPage;
+    public Forms  formsPage;
+
     public BookStoreApp bookStoreAppPage;
     public Login loginPage;
     public BookStore bookStorePage;
