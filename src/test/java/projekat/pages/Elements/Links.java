@@ -18,11 +18,13 @@ public class Links extends BasePage {
     By listOfAPILinks = By.cssSelector("a[href=\"javascript:void(0)\"]");
 
     public Links(WebDriver driver, WebDriverWait wdwait) {
+
         this.driver = driver;
         this.wdwait = wdwait;
     }
 
     public void goToLinksPage(){
+
         driver.navigate().to(urlLinks);
     }
 
@@ -41,33 +43,41 @@ public class Links extends BasePage {
         return list;
     }
     public String getMessage201(){
+
         return "Link has responded with staus 201 and status text Created";
     }
 
     public String getMessage204(){
+
         return "Link has responded with staus 204 and status text No Content";
     }
 
     public String getMessage301(){
+
         return "Link has responded with staus 301 and status text Moved Permanently";
     }
 
     public String getMessage400(){
+
         return "Link has responded with staus 400 and status text Bad Request";
     }
 
     public String getMessage401(){
+
         return "Link has responded with staus 401 and status text Unauthorized";
     }
 
     public String getMessage403(){
+
         return "Link has responded with staus 403 and status text Forbidden";
     }
     public String getMessage404(){
+
         return "Link has responded with staus 404 and status text Not Found";
     }
 
     public List<String> getListOfMessageStrings(){
+
         List<String> list = new ArrayList<>();
         list.add(getMessage201());
         list.add(getMessage204());
@@ -78,6 +88,4 @@ public class Links extends BasePage {
         list.add(getMessage404());
         return list;
     }
-
-
 }

@@ -41,14 +41,15 @@ public class BasePage {
     public BookStore bookStorePage;
     public Profile profilePage;
     public UploadDownload uploadDownloadPage;
-
-
+    public BrokenLinksImages brokenLinksImagesPage;
 
     public By toolsQA = By.cssSelector("img[src=\"/images/Toolsqa.jpg\"");
 
 
+
     @BeforeClass
     public void beforeClass(){
+
     wdm = new ChromeDriverManager();
     wdm.setup();
     driver = new ChromeDriver();
@@ -69,14 +70,17 @@ public class BasePage {
     bookStorePage = new BookStore(driver,wdwait);
     profilePage = new Profile(driver,wdwait);
     uploadDownloadPage = new UploadDownload(driver,wdwait);
+    brokenLinksImagesPage = new BrokenLinksImages(driver,wdwait);
 
 }
 
     public WebElement getToolsQA(){
+
         return driver.findElement(toolsQA);
     }
 
     public static void scrollDown(By by){
+
         JavascriptExecutor js = (JavascriptExecutor) driver;
         WebElement element = driver.findElement(by);
         String ycoord = String.valueOf(element.getLocation().y-300);
@@ -85,6 +89,7 @@ public class BasePage {
 
     @AfterClass
     public void afterClass(){
+
     driver.quit();
 }
 }

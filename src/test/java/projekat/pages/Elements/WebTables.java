@@ -27,22 +27,27 @@ public class WebTables extends BasePage {
     }
 
     public void goToWebTables(){
+
         driver.navigate().to(urlWebTables);
     }
 
     public void clickAddButton(){
+
          goToWebTables();
          driver.findElement(addButton).click();
     }
     public WebElement getSearchBox(){
+
         return driver.findElement(searchBox);
     }
 
     public List<WebElement> getModalFields(){
+
         List<WebElement> list = driver.findElements(modalFields);
         return list;
     }
     public List<String> getValidFirstNames(){
+
         List<String> list = new ArrayList<>();
         list.add("Petar");
         list.add("Uros");
@@ -51,6 +56,7 @@ public class WebTables extends BasePage {
         return list;
     }
     public List<String> getValidLastNames(){
+
         List<String> list = new ArrayList<>();
         list.add("Petrovic");
         list.add("Urosevic");
@@ -59,6 +65,7 @@ public class WebTables extends BasePage {
         return list;
     }
     public List<String> getValidAges(){
+
         List<String> list = new ArrayList<>();
         list.add("00");
         list.add("0");
@@ -68,6 +75,7 @@ public class WebTables extends BasePage {
     }
 
     public List<String> getValidEmails(){
+
         List<String> list = new ArrayList<>();
         list.add("petar@gmail.com");
         list.add("petar@gmail.co");
@@ -76,6 +84,7 @@ public class WebTables extends BasePage {
         return list;
     }
     public List<String> getValidSalaries(){
+
         List<String> list = new ArrayList<>();
         list.add("0");
         list.add("1");
@@ -84,6 +93,7 @@ public class WebTables extends BasePage {
         return list;
     }
     public List<String> getValidDepartments(){
+
         List<String> list = new ArrayList<>();
         list.add("Marketing");
         list.add("HR");
@@ -92,11 +102,13 @@ public class WebTables extends BasePage {
         return list;
     }
     public List<String> getInvalidFirstLastNames(){
+
         List<String> list = new ArrayList<>();
         list.add("");
         return list;
     }
     public List<String> getInvalidAges() {
+
         List<String> list = new ArrayList<>();
         list.add("A");
         list.add(" ");
@@ -105,6 +117,7 @@ public class WebTables extends BasePage {
         return list;
     }
     public List<String> getInvalidEmails(){
+
         List<String> list = new ArrayList<>();
         list.add("petar@gmail.c");
         list.add("123");
@@ -114,12 +127,14 @@ public class WebTables extends BasePage {
     }
 
     public List<String> getInvalidDepartments(){
+
         List<String> list = new ArrayList<>();
         list.add("");
         return list;
     }
 
     public List<String> getInvalidSalaries() {
+
         List<String> list = new ArrayList<>();
         list.add(" ");
         list.add(" 45");
@@ -129,12 +144,12 @@ public class WebTables extends BasePage {
     }
 
     public void clickSubmitButton(){
+
         driver.findElement(submitButton).click();
     }
 
     public void clickEditButton1stRow(){
+
         driver.findElement(editButton).click();
     }
-
-
 }

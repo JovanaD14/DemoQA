@@ -14,21 +14,22 @@ public class UploadDownload extends BasePage {
     By download = By.id("downloadButton");
     By upload = By.id("uploadFile");
 
-
-
     public UploadDownload(WebDriver driver, WebDriverWait wdwait) {
+
         this.driver = driver;
         this.wdwait = wdwait;
     }
 
     public void goToUploadDownload(){
+
         driver.navigate().to(urlUploadDownload);
     }
     public WebElement getDownload() {
+
         return driver.findElement(download);
     }
     public WebElement getUpload() {
+
         return driver.findElement(upload);
     }
-
 }

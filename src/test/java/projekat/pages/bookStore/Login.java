@@ -20,50 +20,61 @@ public class Login extends BasePage {
 
 
     public Login(WebDriver driver, WebDriverWait wdwait) {
+
         this.driver = driver;
         this.wdwait = wdwait;
     }
 
     public void goToLoginPage(){
+
         driver.navigate().to(urlLogin);
     }
 
     public String getValidUsername(){
+
         return "JovanaD";
     }
     public String getValidPassword(){
+
         return "Testdemoqa12!";
     }
     public String getInvalidUsername(){
+
         return "Jovana";
     }
     public String getInvalidPassword(){
+
         return "TEST12?";
     }
+
     public WebElement getUserNameField(){
+
         return driver.findElement(usernameField);
     }
 
     public WebElement getPasswordField(){
+
         return driver.findElement(passwordField);
     }
 
     public WebElement getLoginButton(){
+
         return driver.findElement(loginButton);
     }
     public WebElement getNewUserButton(){
+
         return driver.findElement(newUserButton);
     }
     public WebElement getErrorMessage(){
+
         return driver.findElement(errorMessage);
     }
 
     public void login(){
+
         goToLoginPage();
         getUserNameField().sendKeys(getValidUsername());
         getPasswordField().sendKeys(getValidPassword());
         getLoginButton().click();
     }
-
-
 }

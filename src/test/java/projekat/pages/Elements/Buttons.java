@@ -14,14 +14,13 @@ public class Buttons extends BasePage {
 
     By doubleClickButton = By.id("doubleClickBtn");
     By rightClickButton = By.id("rightClickBtn");
-
     By doubleClickMessage = By.id("doubleClickMessage");
     By rightClickMessage = By.id("rightClickMessage");
-
     By clickMessage = By.id("dynamicClickMessage");
 
 
     public Buttons(WebDriver driver, WebDriverWait wdwait) {
+
         this.driver = driver;
         this.wdwait = wdwait;
     }
@@ -42,7 +41,6 @@ public class Buttons extends BasePage {
 
         return driver.findElement(rightClickButton);
     }
-
 
 
     public WebElement getDoubleClickMessage(){

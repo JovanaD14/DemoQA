@@ -48,8 +48,7 @@ public class Profile extends BasePage {
     }
 
     public WebElement getGoToStoreButton(){
+
         return driver.findElement(goToStoreButton);
     }
-
-
 }

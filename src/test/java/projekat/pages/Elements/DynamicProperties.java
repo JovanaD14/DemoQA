@@ -19,27 +19,34 @@ public class DynamicProperties extends BasePage {
 
 
     public DynamicProperties(WebDriver driver, WebDriverWait wdwait) {
+
         this.driver = driver;
         this.wdwait = wdwait;
     }
 
     public void goToDynamicPropertiesPage(){
+
         driver.navigate().to(urlDynamicProperties);
     }
 
 
     public WebElement getEnableAfterButton(){
+
         return driver.findElement(enableAfter);
     }
 
     public WebElement getVisibleAfterButton(){
+
         return driver.findElement(visibleAfter);
     }
 
     public WebElement getColorChangeButton(){
+
         return driver.findElement(colorChange);
     }
+
     public WebElement getTextWithRandomID(){
+
         List<WebElement> list = driver.findElements(By.tagName("p"));
         for (int i = 0; i < list.size() ; i++) {
             if (list.get(i).getText().equals("This text has random Id")){

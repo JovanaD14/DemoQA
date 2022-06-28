@@ -30,30 +30,36 @@ public class TextBox {
     }
 
     public WebElement getFullNameBox() {
+
         return driver.findElement(fullName);
     }
 
     public WebElement getEmailBox() {
+
         return driver.findElement(email);
     }
 
     public WebElement getCurrentAddressBox() {
+
         return driver.findElement(currentAddress);
     }
 
     public WebElement getPermanentAddressBox() {
+
         return driver.findElement(permanentAddress);
     }
     public void goToTextBoxPage() {
+
         driver.navigate().to(urlTextBox);
     }
 
-
     public void clickSubmitButton() {
+
         driver.findElement(submit).click();
     }
 
     public List<String> getListOfValidFullnames() {
+
         List<String> listOfValidFullnames = new ArrayList<>();
         listOfValidFullnames.add("Petar Petrovic");
         listOfValidFullnames.add("Marija Jovanovic");
@@ -63,6 +69,7 @@ public class TextBox {
 
 
     public List<String> getListOfValidEmails() {
+
         List<String> listOfValidEmails = new ArrayList<>();
         listOfValidEmails.add("petar@gmail.com");
         listOfValidEmails.add("marija@gmail.com");
@@ -71,6 +78,7 @@ public class TextBox {
     }
 
     public List<String> getListOfValidAddresses() {
+
         List<String> listOfValidAddresses = new ArrayList<>();
         listOfValidAddresses.add("Kralja Petra 5, Beograd");
         listOfValidAddresses.add("Dobracina 8/13, Beograd");
@@ -78,6 +86,7 @@ public class TextBox {
         return listOfValidAddresses;
     }
     public List<String> getListOfInvalidEmails(){
+
         List<String > listOfInvalidEmails = new ArrayList<>();
         listOfInvalidEmails.add("petar");
         listOfInvalidEmails.add("abc@");
@@ -86,27 +95,30 @@ public class TextBox {
     }
 
     public WebElement getVerificationBox() {
+
         List<WebElement> verificationBox = driver.findElements(verificationBOX);
         return verificationBox.get(0);
     }
 
     public List<WebElement> getVerificationBoxList(){
+
         List<WebElement> verificationBox = driver.findElements(verificationBOX);
         return verificationBox;
     }
 
     public List<WebElement> getListOfInputData() {
+
         List<WebElement> listOfInputData = getVerificationBox().findElements(By.className("mb-1"));
         return listOfInputData;
     }
 
 
     public void textBoxValidInput(int i) {
+
         String inputFullName = getListOfValidFullnames().get(i);
         String inputEmail = getListOfValidEmails().get(i);
         String inputCurrentAddress = getListOfValidAddresses().get(i);
         String inputPermanentAddress = getListOfValidAddresses().get(i);
-
         getFullNameBox().sendKeys(inputFullName);
         getEmailBox().sendKeys(inputEmail);
         getCurrentAddressBox().sendKeys(inputCurrentAddress);

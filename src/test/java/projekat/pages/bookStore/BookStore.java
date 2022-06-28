@@ -25,40 +25,50 @@ public class BookStore extends BasePage {
 
 
     public BookStore(WebDriver driver, WebDriverWait wdwait) {
+
         this.driver = driver;
         this.wdwait = wdwait;
     }
 
     public void goToBookStore(){
+
         driver.navigate().to(urlStore);
     }
 
     public WebElement getSearchBox(){
+
         return driver.findElement(searchBox);
     }
 
     public WebElement getLogoutButton(){
+
         return driver.findElement(logout);
     }
+
     public List<WebElement> getVerificationList(){
+
         List<WebElement> list = driver.findElements(verification);
         return list;
     }
 
     public String getUsernameVerification(){
+
         return getVerificationList().get(0).getText();
     }
 
     public List<WebElement> listOfRowsPerPage(){
+
         List<WebElement> list = driver.findElements(listOfRows);
         return list;
     }
 
     public List<WebElement> listOfFieldsInsideRow(int i){
+
         List<WebElement> list = listOfRowsPerPage().get(i).findElements(fieldsInsideRow);
         return list;
     }
     public String getLinkTextForSearch(){
+
         String s = listOfFieldsInsideRow(0).get(1).getText();
         return s;
     }
@@ -69,6 +79,7 @@ public class BookStore extends BasePage {
     }
 
     public List<WebElement> getLinksList(){
+
         List<WebElement> list = driver.findElements(linksList);
         return list;
     }
@@ -80,6 +91,7 @@ public class BookStore extends BasePage {
     }
 
     public WebElement getAddToCollectionButton(){
+
         List<WebElement> list = driver.findElements(By.id("addNewRecordButton"));
         System.out.println(list.size());
         return list.get(1);
